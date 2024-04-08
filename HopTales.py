@@ -10,8 +10,7 @@ import re
 import openai
 import streamlit_star_rating
 from streamlit_star_rating import st_star_rating
-openai.api_key = ''
-genai.configure(api_key="")
+
 
 #### users control
 if 'user_data' not in st.session_state:
@@ -433,7 +432,6 @@ def story_settings_page():
 ## story generation   
 def create_prompt():
   model = genai.GenerativeModel('gemini-pro')
-  genai.configure(api_key="AIzaSyAAwDwJMXWOKlvo7GWHVXsYJ0LUDsQalJM")
   
   if not st.session_state['settings']["character"] or st.session_state['random_story'] == True:
     st.session_state['settings']["character"] = random.choice(random_characters)
