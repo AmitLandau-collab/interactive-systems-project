@@ -1,0 +1,19 @@
+name: HopTales_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - ipython
+  - requests
+  - pillow
+  - pip
+  - pip:
+    - openai==0.28
+    - pandas
+    - pillow
+    - streamlit
+    - streamlit-option-menu
+    - google-generativeai
+    - streamlit -q
+    - st-star-rating==0.0.5
